@@ -1,15 +1,12 @@
-* {
-  /*CSS Reset */
-  margin: 0;
-  padding: 0;
-}
-
 .App {
   min-height: 100vh;
   overflow: hidden;
   background-color: rgb(2, 2, 2);
   text-align: center;
   position: relative;
+  /* CSS Reset */
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -22,48 +19,46 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 80vh;
+  min-height: 80vh;
+  /* centering */
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 #quote-box {
-  font-size: 10px;
-  height: 100px;
-
-  display: table;
-  /* make sure text doen't move outside div */
-  margin: auto;
+  background-color: black;
 }
 
 #text {
-  color: aliceblue;
-  background-color: red;
-  padding-top: 15px;
+  color: white;
   /* text to stay witihin its div */
-  position: relative;
-  z-index: 98;
-  height: 100%;
-  width: 700px;
+  white-space: wrap;
+  width: 60vh;
+  text-overflow: clip;
+  margin: 10px;
 }
 
 #author {
   font-size: 16px;
-  color: rgba(160, 154, 154, 2);
-  background-color: black;
-  display: inline-block;
-  text-align: center center;
-  margin: 20px;
+  color: black;
+  background-color: red;
+  /* position */
+  padding: 10px;
 }
 
 #new-quote {
   /* button style */
   background-color: gray;
-  border: none;
+  border-radius: 10px;
   color: black;
-  margin-top: 5px;
+  margin: 15px;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   text-decoration: none;
+  /* position */
+  min-width: 1px;
 }
 
 #footer {
