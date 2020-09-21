@@ -10,7 +10,7 @@
 }
 
 h1 {
-  color: grey;
+  color: red;
 }
 
 #background-image {
@@ -18,7 +18,7 @@ h1 {
   background-image: url(./images/backgroundImage1.jpeg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   min-height: 80vh;
   /* centering */
   display: grid;
@@ -26,39 +26,45 @@ h1 {
   justify-content: center;
 }
 
-#quote-box {
-  background-color: black;
+#quote {
+  background-color: rgb(0, 0, 0, 60%);
+  padding: 20px;
+  width: 850px;
+  height: 50%;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 #text {
   color: white;
+  font-size: 20px;
   /* text to stay witihin its div */
   white-space: wrap;
-  width: 60vh;
   text-overflow: clip;
-  margin: 10px;
 }
 
 #author {
   font-size: 16px;
   color: black;
   background-color: red;
-  /* position */
   padding: 10px;
+  width: 20vh;
+  border-radius: 5px;
+  /* position */
+  float: right;
 }
 
 #new-quote {
   /* button style */
   background-color: gray;
-  border-radius: 10px;
   color: black;
-  margin: 15px;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  /* position */
-  min-width: 1px;
+  font-size: 20px;
+  /* make that button stay */
+  position: fixed;
+  left: 150px;
+  bottom: 130px;
 }
 
 #footer {
@@ -66,7 +72,7 @@ h1 {
   color: black;
   width: 100%;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 10px;
   position: fixed;
   bottom: 0;
   height: 5%;
