@@ -33,17 +33,20 @@ class QuoteBox extends Component {
     return (
       <div>
         <div id="background-image">
-          {/* Quote with author text */}
-          <div id="quote-box">
-            <h2 id="text">{this.state.quote}</h2>
-            <p id="author">{this.state.author}</p>
+          <div class="quote-box">
+            {/* Quote with author text */}
+            <div id="quote">
+              <p id="text">{this.state.quote}</p>
+              <p id="author">{this.state.author}</p>
+
+              {/* BUTTON */}
+              <button id="new-quote" onClick={this.getRandomQuote}>
+                Get a Quote
+              </button>
+            </div>
+            <FontAwesomeIcon icon={faTwitter} id="tweet-quote" href="" />
           </div>
         </div>
-        {/* BUTTON */}
-        <button id="new-quote" onClick={this.getRandomQuote}>
-          Get a Quote
-        </button>
-        <FontAwesomeIcon icon={faTwitter} id="tweet-quote" href="" />
       </div>
     );
   }

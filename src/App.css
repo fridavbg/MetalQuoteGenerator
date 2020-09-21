@@ -1,19 +1,16 @@
-* {
-  /*CSS Reset */
-  margin: 0;
-  padding: 0;
-}
-
 .App {
   min-height: 100vh;
   overflow: hidden;
   background-color: rgb(2, 2, 2);
   text-align: center;
   position: relative;
+  /* CSS Reset */
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-  color: grey;
+  color: red;
 }
 
 #background-image {
@@ -21,49 +18,53 @@ h1 {
   background-image: url(./images/backgroundImage1.jpeg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 80vh;
+  background-size: cover;
+  min-height: 80vh;
+  /* centering */
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
-#quote-box {
-  font-size: 10px;
-  height: 100px;
-
-  display: table;
-  /* make sure text doen't move outside div */
-  margin: auto;
+#quote {
+  background-color: rgb(0, 0, 0, 60%);
+  padding: 20px;
+  width: 850px;
+  height: 50%;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 #text {
-  color: aliceblue;
-  background-color: red;
-  padding-top: 15px;
+  color: white;
+  font-size: 20px;
   /* text to stay witihin its div */
-  position: relative;
-  z-index: 98;
-  height: 100%;
-  width: 700px;
+  white-space: wrap;
+  text-overflow: clip;
 }
 
 #author {
   font-size: 16px;
-  color: rgba(160, 154, 154, 2);
-  background-color: black;
-  display: inline-block;
-  text-align: center center;
-  margin: 20px;
+  color: black;
+  background-color: red;
+  padding: 10px;
+  width: 20vh;
+  border-radius: 5px;
+  /* position */
+  float: right;
 }
 
 #new-quote {
   /* button style */
   background-color: gray;
-  border: none;
   color: black;
-  margin-top: 5px;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  text-decoration: none;
+  font-size: 20px;
+  /* make that button stay */
+  position: fixed;
+  left: 150px;
+  bottom: 130px;
 }
 
 #footer {
@@ -71,7 +72,7 @@ h1 {
   color: black;
   width: 100%;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 10px;
   position: fixed;
   bottom: 0;
   height: 5%;
