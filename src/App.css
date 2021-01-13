@@ -77,3 +77,15 @@ h1 {
   bottom: 0;
   height: 5%;
 }
+@media (min-width: 300px) and (max-width: 800px) {
+  #quote {
+    width: 80%;
+    margin: auto;
+  }
+  #new-quote {
+    position: fixed;
+    left: 80px;
+    bottom: 60px;
+    font-size: 18px;
+  }
+}
